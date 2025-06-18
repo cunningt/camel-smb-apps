@@ -4,9 +4,15 @@
 # Log file
 *.log
 
+**/config.properties
+
 # BlueJ files
 *.ctxt
 
+
+.DS_Store
+**/target
+**/.vscode
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
