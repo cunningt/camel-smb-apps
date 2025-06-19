@@ -42,7 +42,7 @@ public class MySpringBootRouter extends RouteBuilder {
 
     @Override
     public void configure() {
-        from("smb:192.168.1.20:445/src?username=RAW({{camel.smb.username}})&password=RAW({{camel.smb.password}})&path=test&recursive=false&disconnect=false")
+        from("smb:{{camel.smb.host}}:{{camel.smb.port}}/src?username=RAW({{camel.smb.username}})&password=RAW({{camel.smb.password}})&path=test&recursive=false&disconnect=false")
             .to("stream:out");
     }
 

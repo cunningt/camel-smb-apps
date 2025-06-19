@@ -38,7 +38,7 @@ public class MySpringBootRouter extends RouteBuilder {
     public void configure() {
         from("file:/Users/tcunning/test?noop=true")
             .log("${body}")
-            .to("smb:192.168.1.20:445/src?userName=RAW({{camel.smb.username}})&password=RAW({{camel.smb.password}})&path=test/write/bar&fileExist=Append&autoCreate=true");
+            .to("smb:{{camel.smb.host}}:{{camel.smb.port}}/src?userName=RAW({{camel.smb.username}})&password=RAW({{camel.smb.password}})&path=test/write/bar&fileExist=Append&autoCreate=true");
     }
 
 }
